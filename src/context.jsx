@@ -6,9 +6,9 @@ export const AppProvider = ({children}) => {
   const greeting = "hello world";
 
   return (
-    <AppContext value={{greeting}}>
+    <AppContext.Provider value={{greeting}}>
       {children}
-    </AppContext>
+    </AppContext.Provider>
   )
 }
 
