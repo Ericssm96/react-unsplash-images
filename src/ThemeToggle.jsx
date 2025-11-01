@@ -9,8 +9,8 @@ export const ThemeToggle = () => {
     <section className="toggle-container">
       <button className="dark-toggle">
         {isDarkTheme && 
-        <BsFillMoonFill className="toggle-icon" /> || 
-        <BsFillSunFill className="toggle-icon" />}
+        <BsFillMoonFill className="toggle-icon" onClick={toggleDarkTheme} /> || 
+        <BsFillSunFill className="toggle-icon" onClick={toggleDarkTheme} />}
       </button>
     </section>
   )

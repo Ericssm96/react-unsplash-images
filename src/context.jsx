@@ -8,6 +8,8 @@ export const AppProvider = ({children}) => {
   const toggleDarkTheme = () => {
     const scopedIsDarkTheme = !isDarkTheme;
     setIsDarkTheme(scopedIsDarkTheme);
+    const body = document.querySelector("body");
+    body.classList.toggle("dark-theme", scopedIsDarkTheme);
   }
 
   return (
