@@ -69,6 +69,13 @@ html {
   --darkModeTransition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    --textColor: var(--dark-mode-text-color);
+    --backgroundColor: var(--dark-mode-bg-color);
+  }
+}
+
 .dark-theme {
   --textColor: var(--dark-mode-text-color);
   --backgroundColor: var(--dark-mode-bg-color);
@@ -84,6 +91,7 @@ body {
   background: var(--backgroundColor);
   color: var(--textColor);
 }
+
 p {
   margin: 0;
 }
