@@ -1,12 +1,15 @@
 import { customFetch } from "./utils";
 import { useQuery } from "@tanstack/react-query";
+import { useGlobalContext } from "./context";
 
 export const Gallery = () => {
 
+  const { searchTerm } = useGlobalContext();
+
   const {isError, isLoading, data: responseData} = useQuery({
-    queryKey: ["search-photos"],
+    queryKey: ["search-photos", searchTerm],
     queryFn: () => {
-      return customFetch("/search/photos?page=1&query=cat");
+      return customFetch(`/search/photos?page=1&query=${searchTerm}`);
     }
   });
 
